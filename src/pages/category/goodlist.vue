@@ -10,22 +10,22 @@
             <li>
                 <img src="~@/assets/img/newgoods.png">
                 <p>精美礼盒亚菲儿女士香水女士持久淡香清新50ml香水</p>
-                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"></p>
+                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"><span class="circular"><img src="~@/assets/icon/goodsadd.png"></span></p>
             </li>
             <li>
                 <img src="~@/assets/img/category-goods.png">
                 <p>精美礼盒亚菲儿女士香水女士持久淡香清新50ml香水</p>
-                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"></p>
+                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"><span class="circular"><img src="~@/assets/icon/goodsadd.png"></span></p>
             </li>
             <li>
                 <img src="~@/assets/img/newgoods.png">
                 <p>精美礼盒亚菲儿女士香水女士持久淡香清新50ml香水</p>
-                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"></p>
+                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"><span class="circular"><img src="~@/assets/icon/goodsadd.png"></span></p>
             </li>
             <li>
                 <img src="~@/assets/img/category-goods.png">
                 <p>精美礼盒亚菲儿女士香水女士持久淡香清新50ml香水</p>
-                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"></p>
+                <p><span>￥358.00</span><img src="~@/assets/icon/cartselect.png"><span class="circular"><img src="~@/assets/icon/goodsadd.png"></span></p>
             </li>
         </ul>
     </div>
@@ -152,7 +152,11 @@ export default {
         margin: 0;padding: 0 1%;
         li{width: 47%;border-bottom: 1px solid #eeeeee;display: inline-block;padding: 1.5rem 0.2rem 1rem 0.2rem;text-align: center;
             img{width: 60%;}
-            p{font-size: 0.8rem;text-align:left;margin-top:0.5rem;img{float: right;width: 1rem;}span{color: #F54321}}
+            p{font-size: 0.9rem;text-align:left;margin-top:0.5rem;position: relative;
+                img{float: right;width: 1.3rem;}
+                span{color: #F54321}
+                .circular{position: absolute;width: 0.7rem;height: 0.7rem;border-radius: 50%;background:#F54321;right:0;top:-0.2rem;right: -0.2rem;img{width: 80%;position: relative;top: 10%;right: 5%;}}
+            }
         }
         li:nth-child(2n){border-left: 1px solid #eeeeee;}
     }

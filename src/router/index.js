@@ -74,8 +74,8 @@ const routes = [
                 path: 'cart',
                 name: 'cart',
                 meta: {
-                    title: '购物车',
-                    requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
+                    title: '我的购物车',
+                    //requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
                 },
                 component: Cart
             },
@@ -83,8 +83,8 @@ const routes = [
                 path: 'order',
                 name: 'order',
                 meta: {
-                    title: '订单',
-                    requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
+                    title: '订单确认',
+                    //requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
                 },
                 component: Order
             },
@@ -93,7 +93,7 @@ const routes = [
                 name: 'address',
                 meta: {
                     title: '地址',
-                    requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
+                    //requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
                 },
                 component: Address
             },
@@ -101,8 +101,8 @@ const routes = [
                 path: 'user',
                 name: 'user',
                 meta: {
-                    title: '我的',
-                    requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
+                    title: '会员',
+                    //requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
                 },
                 component: User
             },

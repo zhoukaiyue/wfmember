@@ -1,24 +1,37 @@
 <template>
     <div class="address">
+    <h5>地址信息</h5>
         <group>
             <x-input title="联系人"
-                     placeholder="名字"
+                     placeholder="收货人姓名"
                      v-model="form.name"></x-input>
             <x-input title="手机号码"
-                     placeholder="11位手机号"
+                     placeholder="请输入联系电话"
                      v-model="form.mobile"></x-input>
-            <x-address title="地区信息"
+            <x-address title="所在地区"
                        class="border"
                        v-model="form.cityArr"
                        :list="addressData"
-                       placeholder="请选择地址"></x-address>
-            <x-textarea :max="20"
+                       placeholder="请选择地取"></x-address>
+            <x-input title="详细地址"
+                        :max="20"
                         name="detail"
-                        placeholder="请输入详细地址、如街道、楼牌号等"
-                        v-model="form.detail"></x-textarea>
+                        v-model="form.detail"></x-input>
         </group>
-        <div style="margin:40px 10px;">
+        <div class="card">
+            身份证信息（加密保存）
+            <p>跨境保税商品必须提供收货人身份证信息用以办理相关手续。</p>
+        </div>
+        <group>
+            <x-input title="身份证号"
+                 placeholder="请填写收件人身份证信息"
+                 v-model="form.card"></x-input>
+             </group>
+        <div style="margin-top: 30px;padding: 0 15px">
             <x-button @click.native="submitAddress">保存</x-button>
+        </div>
+        <div style="margin-top: 20px;padding: 0 15px;" class="del">
+            <x-button>删除</x-button>
         </div>
     </div>
 </template>
@@ -42,6 +55,7 @@ export default {
             form: {
                 name: '',
                 mobile: '',
+                card:'',
                 cityArr: [],
                 detail: ''
             },
@@ -102,8 +116,23 @@ export default {
     }
 }
 </script>
-
+<style type="text/css">
+    .weui-cells{margin-top: 0!important;color: #333333;font-size: 0.9rem!important;line-height: 30px!important;}
+    .weui-cells:after{display: none!important;}
+    ::-webkit-input-placeholder{color: #999999;font-size: 0.8rem;line-height: 50px;text-align: right;}
+    .vux-cell-placeholder{font-size: 0.8rem;}
+    .weui-btn_default{background: #F54321!important;color: #ffffff!important;font-size: 0.9rem;}
+    .del .weui-btn_default{background: #cccccc!important;}
+</style>
 <style scoped lang="less">
+.address{
+    background: #f7f7f7;
+    h5{font-weight: normal;font-size: 0.9rem;line-height: 40px;padding: 0 15px;background: #f7f7f7;}
+    .card{
+        background: #f7f7f7;color: #777777;padding: 20px 15px;font-size: 0.8rem;line-height: 25px;
+        p{color: #F54321;font-size: 0.75rem;}
+    }
+}
 .border {
     position: relative;
     &::before {

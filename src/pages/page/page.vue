@@ -91,7 +91,7 @@ export default {
             }
         },
         isShowTabbar() {
-            if (/detail|theme|order|address|about/.test(this.$route.path)) {
+            if (/detail|theme|order|address|about|cart/.test(this.$route.path)) {
                 return true
             }
             return false

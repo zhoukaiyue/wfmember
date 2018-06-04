@@ -57,7 +57,7 @@ export default {
             this.getProduct(id)
         },
         linktoDetail(id) {
-            this.$router.push({ path: '/page/detail', query: { id: id } })
+            this.$router.push({ path: '/page/goodlist', query: { id: id } })
         },
         getCategory() {
             this.$http

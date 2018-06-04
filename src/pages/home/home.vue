@@ -10,7 +10,7 @@
                     v-for="(item, index) in imgList"
                     :key="index"
                     @click.native="linkToDetail(item.key_word)">
-                    <img :src="item.img.url"
+                    <img src="~@/assets/img/banner.png"
                         alt="image">
                 </swiper-item>
             </swiper>
